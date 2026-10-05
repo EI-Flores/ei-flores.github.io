@@ -261,6 +261,10 @@ svg.electronics-symbol { height: auto; stroke: currentColor; }
 .about-copy { padding-top: 33px; }
 .about-lead { font-size: 25px; line-height: 1.4; letter-spacing: -.03em; margin: 0 0 25px; }
 .about-copy > p:not(.about-lead) { color: var(--muted); font-size: 14px; line-height: 1.9; margin: 0 0 20px; }
+.confidentiality-note { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--about-line); }
+.confidentiality-note h3 { display: flex; align-items: center; gap: 10px; font-size: 16px; line-height: 1.5; font-weight: 500; }
+.confidentiality-note .section-icon { flex-shrink: 0; }
+.confidentiality-note p { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
 .technology-list { display: flex; gap: 8px; flex-wrap: wrap; padding-block: 5px 16px; }
 .technology-list span { font: 11px/1.6 Consolas, "Courier New", monospace; color: var(--technology-text); padding: 6px 9px; border: 1px solid var(--technology-line); border-radius: 3px; background: var(--technology-background); }
 .text-link { display: inline-block; color: var(--cyan); font-size: 12px; padding-block: 10px; }

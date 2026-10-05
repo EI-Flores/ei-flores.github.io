@@ -24,6 +24,12 @@ Actualiza cada clave en los mapas `en` y `es` de `window.portfolioTranslations`.
 
 Para agregar un proyecto, adapta un artículo `repository-card`, asigna un ID único y conserva la relación de `aria-labelledby` con su encabezado. Incluye los textos en ambos idiomas y enlaces a código y documentación verificables.
 
+### Confidencialidad de la experiencia profesional
+
+La sección de proyectos contiene únicamente muestras públicas y ejemplos de aprendizaje. Describe la experiencia profesional en términos generales, sin identificar empleadores, organizaciones ni sistemas internos. No agregues código, datos, capturas, enlaces internos o detalles de infraestructura de esos desarrollos.
+
+Mantén la nota de confidencialidad en español e inglés y el texto inglés de respaldo. No atribuyas los proyectos públicos a un empleo ni menciones acuerdos específicos que no estén confirmados. Revisa también el README, los metadatos y los textos de commits y solicitudes de cambios antes de publicar.
+
 ## Preferencias y diseño
 
 Las claves locales son `portfolio-language`, `portfolio-theme` y `portfolio-low-glow`. La primera visita usa español si el idioma principal del navegador es español; en los demás casos usa inglés. El tema inicial es oscuro. Las preferencias guardadas tienen prioridad.
