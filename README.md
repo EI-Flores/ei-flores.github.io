@@ -8,13 +8,13 @@ The site is written in English and presents software development, field applicat
 
 ## Files
 
-- `index.html`: profile, selected projects, descriptions, and contact links.
+- `index.html`: profile, selected projects, descriptions, contact links, and contact form.
 - `styles.css`: responsive layout and dark visual design.
 - `app.js`: mobile navigation and optional reduced decorative glow.
 - `favicon.svg`: site icon.
 - `.nojekyll`: tells GitHub Pages to serve these static files without a Jekyll build.
 
-There is no build step and no external runtime dependency. Open `index.html` in a browser to review changes locally.
+There is no build step and no external JavaScript dependency. The contact form uses Formspree to process messages. Open `index.html` in a browser to review changes locally.
 
 ## Update the content
 
@@ -25,6 +25,16 @@ Selected projects live inside the `work` section. Each project has a descriptive
 Link to a live demo only when it exists and works. Label learning examples, experiments, and future directions accurately. A project can be useful to visitors through its source, screenshots, or documentation without having a hosted demo.
 
 After changing CSS or JavaScript, update the corresponding `?v=` value in `index.html` to help browsers load the latest file.
+
+## Contact form
+
+The form in the `contact` section sends a standard HTML POST to `https://formspree.io/f/mnqyojqz`. It works without JavaScript; Formspree handles submission feedback and any configured verification. Name, email, and message are required, and the hidden `_gotcha` field helps filter spam.
+
+The recipient email is configured in the Formspree dashboard and is not included in these website files. To change the recipient, update it inside Formspree. To replace the form, change its `action` URL in `index.html`.
+
+Keep the recipient verified and review delivery settings, spam protection, domain restrictions, and the account's monthly allowance in Formspree. If using a domain restriction, allow `ei-flores.github.io`. The public form ID is intended to be visible; do not add account credentials or secret API keys to the repository.
+
+To check delivery after publishing, submit a short test message and verify both the Formspree dashboard and the recipient inbox. The service accepting a submission does not itself confirm email delivery.
 
 ## Publish on GitHub Pages
 
