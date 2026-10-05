@@ -2,6 +2,8 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'self' https://formspree.io; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#0d141e">
@@ -17,7 +19,7 @@
   <script src="./preference-init.js?v=bilingual-theme"></script>
   <link rel="stylesheet" href="./styles.css?v=bilingual-theme">
   <script src="./translations.js?v=bilingual-theme-heading" defer></script>
-  <script src="./app.js?v=bilingual-theme" defer></script>
+  <script src="./app.js?v=security-renderer" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="navigation.skip">Skip to content</a>

@@ -29,15 +29,39 @@
     menuButton.setAttribute('aria-label', translate(menuOpen ? 'menu.closeAria' : 'menu.openAria'));
   }
 
+
+  function setFormattedText(element, value) {
+    // Only the formatting used by local headings is permitted; other markup stays text.
+    const fragment = document.createDocumentFragment();
+    const stack = [fragment];
+    const tokens = value.split(/(<br>|<span class="(?:accent|muted-heading)">|<\/span>)/g);
+    tokens.forEach(token => {
+      const parent = stack[stack.length - 1];
+      if (token === '<br>') {
+        parent.appendChild(document.createElement('br'));
+      } else if (token === '<span class="accent">' || token === '<span class="muted-heading">') {
+        const span = document.createElement('span');
+        span.className = token === '<span class="accent">' ? 'accent' : 'muted-heading';
+        parent.appendChild(span);
+        stack.push(span);
+      } else if (token === '</span>' && stack.length > 1) {
+        stack.pop();
+      } else if (token) {
+        parent.appendChild(document.createTextNode(token));
+      }
+    });
+    element.replaceChildren(fragment);
+  }
+
   function setLanguage(nextLanguage) {
-    if (!translations?.[nextLanguage]) return;
+    if (!['en', 'es'].includes(nextLanguage) || !translations?.[nextLanguage]) return;
     language = nextLanguage;
     root.lang = language;
     root.dataset.language = language;
-    // Markup translations are fixed local strings; visitor input is never interpreted as HTML.
+    // Translation formatting is limited to text, line breaks, and two heading classes.
     const bindings = {
       'data-i18n': (element, value) => { element.textContent = value; },
-      'data-i18n-html': (element, value) => { element.innerHTML = value; },
+      'data-i18n-html': setFormattedText,
       'data-i18n-aria-label': (element, value) => element.setAttribute('aria-label', value),
       'data-i18n-title': (element, value) => element.setAttribute('title', value),
       'data-i18n-placeholder': (element, value) => element.setAttribute('placeholder', value),
