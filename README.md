@@ -9,7 +9,7 @@ Este sitio reúne mi perfil profesional, mis especialidades y una selección de 
 ## Qué encontrarás
 
 - **Especialidades:** sistemas para organizar información, aplicaciones móviles para trabajo de campo y automatización de documentos e imágenes.
-- **Proyectos:** código fuente y documentación para explorar la finalidad y el funcionamiento de cada herramienta.
+- **Proyectos públicos:** código fuente y documentación de herramientas públicas y ejemplos de aprendizaje.
 - **Perfil profesional:** formación en Ingeniería en Electrónica y Maestría en Computación Aplicada, junto con las tecnologías que utilizo.
 - **Contacto:** un espacio para conversar sobre oportunidades, colaboraciones e ideas.
 
@@ -23,6 +23,12 @@ Este sitio reúne mi perfil profesional, mis especialidades y una selección de 
 | [my-first-cicd](https://github.com/EI-Flores/my-first-cicd) | Laboratorio de pruebas automatizadas con Python y GitHub Actions. |
 
 [Explora todos mis repositorios.](https://github.com/EI-Flores?tab=repositories)
+
+## Experiencia profesional y confidencialidad
+
+Parte de mi experiencia profesional corresponde a desarrollos de uso interno. Por confidencialidad y seguridad, no publico sus nombres, código fuente, datos, capturas ni información que identifique a las organizaciones involucradas. El portafolio presenta mis habilidades de forma general y distingue los proyectos públicos de esa experiencia.
+
+**Professional experience and confidentiality:** Part of my professional experience involves internal projects. For confidentiality and security reasons, I do not publish their names, source code, data, screenshots, or information identifying the organizations involved. This portfolio presents my skills in general terms and distinguishes public projects from that experience.
 
 ## Experiencia del sitio
 
