@@ -247,6 +247,8 @@ svg.electronics-symbol { height: auto; stroke: currentColor; }
 .electronics-copy h3 { font-size: 28px; line-height: 1.3; letter-spacing: -.04em; }
 .electronics-copy > p:not(.eyebrow) { max-width: 810px; margin: 14px 0 19px; color: var(--muted); font-size: 14px; line-height: 1.85; }
 .electronics-direction .project-stage { color: var(--warm-text); border-color: var(--warm-line); }
+.pinexo-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; }
+.electronics-copy > p.pinexo-next { border-left: 2px solid var(--warm-line); padding-left: 12px; font-size: 12px; }
 .direction-tags > span { color: var(--warm-tag-text); border-color: var(--warm-tag-line); }
 .about { background: linear-gradient(105deg, var(--about-start), var(--about-end)); border-block: 1px solid var(--about-line); }
 .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: start; }
