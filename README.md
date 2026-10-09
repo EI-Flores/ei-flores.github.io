@@ -21,6 +21,9 @@ Este sitio reúne mi perfil profesional, mis especialidades y una selección de 
 | [employeeCrud](https://github.com/EI-Flores/employeeCrud) | Ejemplo de aplicación de escritorio en Java para administrar registros de empleados. |
 | [vmware-secureboot-patch-Linux](https://github.com/EI-Flores/vmware-secureboot-patch-Linux) | Firma de módulos de VMware para Linux con Secure Boot. |
 | [my-first-cicd](https://github.com/EI-Flores/my-first-cicd) | Laboratorio de pruebas automatizadas con Python y GitHub Actions. |
+| [pinexo](https://github.com/EI-Flores/pinexo) | Panel meteorológico y satelital en desarrollo para Raspberry Pi 3 y LCD GPIO, con Python y Pygame. |
+
+PiNexo conecta software con una pantalla física. Los datos de temperatura actuales provienen de pronósticos meteorológicos; los sensores físicos de temperatura son una posible ampliación futura.
 
 [Explora todos mis repositorios.](https://github.com/EI-Flores?tab=repositories)
 

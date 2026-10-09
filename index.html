@@ -17,8 +17,8 @@
   <title data-i18n="meta.title">Juan Arturo Flores — Engineering ideas into everyday solutions</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <script src="./preference-init.js?v=bilingual-theme"></script>
-  <link rel="stylesheet" href="./styles.css?v=confidentiality">
-  <script src="./translations.js?v=confidentiality" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20261009-pinexo">
+  <script src="./translations.js?v=20261009-pinexo" defer></script>
   <script src="./app.js?v=security-renderer" defer></script>
 </head>
 <body>
@@ -215,10 +215,17 @@
         </div>
       </div>
       <div class="repository-directory"><p data-i18n="work.directoryIntro">This selection is a starting point. More experiments and projects live on GitHub.</p><a class="text-link" href="https://github.com/EI-Flores?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="work.repositories">Browse all repositories</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="shared.newTab"> (opens in a new tab)</span></a></div>
-      <aside class="electronics-direction" aria-labelledby="electronics-title">
+      <article class="electronics-direction" id="pinexo" aria-labelledby="pinexo-title">
         <svg class="electronics-symbol" viewBox="0 0 160 160" fill="none" aria-hidden="true"><path d="M17 17h126v126H17Z" stroke-dasharray="3 7"/><rect x="47" y="47" width="66" height="66" rx="5"/><rect x="62" y="62" width="36" height="36" rx="2"/><path d="M62 32v15m18-15v15m18-15v15M62 113v15m18-15v15m18-15v15M32 62h15m-15 18h15m-15 18h15m66-36h15m-15 18h15m-15 18h15M32 62H23V32h39m66 66h9v30H98"/><circle cx="62" cy="32" r="3"/><circle cx="98" cy="128" r="3"/><path d="m72 82 6 6 11-14"/></svg>
-        <div class="electronics-copy"><p class="eyebrow" data-i18n="shared.softwareElectronics">SOFTWARE × ELECTRONICS</p><h3 id="electronics-title" data-i18n="electronics.title">Where software meets the physical world.</h3><p data-i18n="electronics.description">Electronics is part of my engineering foundation. I plan to bring that background into future projects that connect physical systems with software.</p><div class="direction-tags project-tags"><span data-i18n="electronics.future">Future exploration</span></div></div>
-      </aside>
+        <div class="electronics-copy">
+          <p class="eyebrow" data-i18n="shared.softwareElectronics">SOFTWARE × ELECTRONICS</p>
+          <div class="pinexo-heading"><h3 id="pinexo-title" data-i18n="pinexo.title">PiNexo. Weather on a Raspberry Pi.</h3><span class="project-stage" data-i18n="pinexo.stage">IN DEVELOPMENT</span></div>
+          <p data-i18n="pinexo.description">A personal dashboard for a Raspberry Pi 3 and a GPIO LCD, bringing weather forecasts, rain alerts, and satellite imagery of Mexico to a small display.</p>
+          <div class="direction-tags project-tags"><span>Raspberry Pi 3</span><span>Python / Pygame</span><span>GPIO / SPI LCD</span></div>
+          <p class="pinexo-next" data-i18n="pinexo.future">Temperature data currently comes from weather forecasts. Physical temperature sensors are a possible future addition.</p>
+          <div class="repository-links"><a href="https://github.com/EI-Flores/pinexo" target="_blank" rel="noopener noreferrer"><span data-i18n="shared.source">Source code</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="pinexo.newTab"> for PiNexo (opens in a new tab)</span></a><a href="https://github.com/EI-Flores/pinexo/blob/main/docs/hardware.md" target="_blank" rel="noopener noreferrer"><span data-i18n="pinexo.guide">Hardware guide</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="pinexo.newTab"> for PiNexo (opens in a new tab)</span></a></div>
+        </div>
+      </article>
     </section>
 
     <section class="about section" id="about" aria-labelledby="about-title">
