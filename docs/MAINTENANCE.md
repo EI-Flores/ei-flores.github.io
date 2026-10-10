@@ -1,61 +1,69 @@
-# Guía de mantenimiento
+# Maintenance guide
 
-Esta guía describe cómo editar y publicar el portafolio. La presentación del proyecto está en el [README](../README.md).
+This guide explains how to edit and publish the portfolio. See the [README](../README.md) for an overview of the project.
 
-## Archivos principales
+## Documentation conventions
 
-| Archivo | Responsabilidad |
+Write the README and all project documentation in English. The website remains bilingual, with English and Spanish content.
+
+## Main files
+
+| File | Responsibility |
 | --- | --- |
-| `index.html` | Estructura y contenido inglés de respaldo. |
-| `translations.js` | Textos y atributos en español e inglés. |
-| `preference-init.js` | Preferencias iniciales antes de cargar los estilos. |
-| `app.js` | Idioma, tema, brillo y menú móvil. |
-| `styles.css` | Diseño responsivo y colores de ambos temas. |
-| `favicon.svg` | Ícono del sitio. |
-| `.nojekyll` | Publicación estática sin Jekyll. |
+| `index.html` | Structure and fallback English content. |
+| `translations.js` | Text and attributes in English and Spanish. |
+| `preference-init.js` | Initial preferences applied before styles load. |
+| `app.js` | Language, theme, glow, and mobile menu controls. |
+| `styles.css` | Responsive layout and colors for both themes. |
+| `favicon.svg` | Site icon. |
+| `.nojekyll` | Static publishing without Jekyll. |
 
-## Contenido e idiomas
+## Content and languages
 
-Actualiza cada clave en los mapas `en` y `es` de `window.portfolioTranslations`. Conserva el texto inglés de respaldo de `index.html` para las visitas sin JavaScript.
+Update each key in the `en` and `es` maps of `window.portfolioTranslations`. Keep the fallback English text in `index.html` for visitors who do not use JavaScript.
 
-`data-i18n` aplica texto. Los atributos `data-i18n-aria-label`, `data-i18n-title`, `data-i18n-placeholder`, `data-i18n-value` y `data-i18n-content` actualizan sus atributos correspondientes.
+`data-i18n` applies text. The attributes `data-i18n-aria-label`, `data-i18n-title`, `data-i18n-placeholder`, `data-i18n-value`, and `data-i18n-content` update their corresponding attributes.
 
-`data-i18n-html` admite sólo estos tokens exactos: `<br>`, `<span class="accent">`, `<span class="muted-heading">` y `</span>`. El resto se muestra como texto. No agregues etiquetas, atributos o clases adicionales.
+`data-i18n-html` accepts only these exact tokens: `<br>`, `<span class="accent">`, `<span class="muted-heading">`, and `</span>`. Everything else is displayed as text. Do not add other tags, attributes, or classes.
 
-Para agregar un proyecto, adapta un artículo `repository-card`, asigna un ID único y conserva la relación de `aria-labelledby` con su encabezado. Incluye los textos en ambos idiomas y enlaces a código y documentación verificables.
+To add a project, adapt a `repository-card` article, assign a unique ID, and preserve the `aria-labelledby` relationship with its heading. Include text in both languages and verifiable links to source code and documentation.
 
-### Confidencialidad de la experiencia profesional
+### Professional experience and confidentiality
 
-La sección de proyectos contiene únicamente muestras públicas y ejemplos de aprendizaje. Describe la experiencia profesional en términos generales, sin identificar empleadores, organizaciones ni sistemas internos. No agregues código, datos, capturas, enlaces internos o detalles de infraestructura de esos desarrollos.
+The projects section contains only public samples and learning examples. Describe professional experience in general terms, without identifying employers, organizations, or internal systems. Do not add source code, data, screenshots, internal links, or infrastructure details from those developments.
 
-Mantén la nota de confidencialidad en español e inglés y el texto inglés de respaldo. No atribuyas los proyectos públicos a un empleo ni menciones acuerdos específicos que no estén confirmados. Revisa también el README, los metadatos y los textos de commits y solicitudes de cambios antes de publicar.
+Keep the website's confidentiality notice in English and Spanish, along with the fallback English text. Do not attribute public projects to an employer or mention specific agreements that have not been confirmed. Also review the README, metadata, commit messages, and pull request text before publishing.
 
-## Preferencias y diseño
+## Preferences and design
 
-Las claves locales son `portfolio-language`, `portfolio-theme` y `portfolio-low-glow`. La primera visita usa español si el idioma principal del navegador es español; en los demás casos usa inglés. El tema inicial es oscuro. Las preferencias guardadas tienen prioridad.
+The local storage keys are `portfolio-language`, `portfolio-theme`, and `portfolio-low-glow`. On a first visit, the site uses Spanish if the browser's primary language is Spanish; otherwise, it uses English. The initial theme is dark. Saved preferences take priority.
 
-Edita las variables de color y las reglas responsivas en `styles.css`. Comprueba ambos temas, el teclado, el zoom y los anchos de móvil, tableta y escritorio. Actualiza el parámetro `?v=` del archivo enlazado en `index.html` cuando cambie.
+Edit the color variables and responsive rules in `styles.css`. Check both themes, keyboard navigation, zoom, and mobile, tablet, and desktop widths. Update the `?v=` parameter of the file linked in `index.html` whenever that file changes.
 
-## Contacto y protección contra spam
+## Contact and spam protection
 
-El formulario utiliza un POST HTTPS a Formspree. El destinatario, reCAPTCHA y Formshield se administran en su panel. El identificador público del formulario no es una contraseña; no publiques claves privadas, credenciales ni claves secretas de reCAPTCHA.
+The form sends an HTTPS POST to Formspree. The recipient, reCAPTCHA, and Formshield are managed in the Formspree dashboard. The public form identifier is not a password; do not publish private keys, credentials, or reCAPTCHA secret keys.
 
-El envío HTML actual admite la verificación alojada por Formspree. Si se cambia a un envío con JavaScript o a un CAPTCHA incrustado, revisa primero la [documentación de Formspree](https://formspree.io/blog/recaptcha-methods/) y la política de contenido del sitio.
+The current HTML submission supports verification hosted by Formspree. Before switching to JavaScript submission or an embedded CAPTCHA, review the [Formspree documentation](https://formspree.io/blog/recaptcha-methods/) and the site's content security policy.
 
-Las restricciones por dominio requieren que el navegador envíe el origen de referencia. Por eso la página utiliza `strict-origin-when-cross-origin`. Consulta la [configuración por dominio](https://help.formspree.io/articles/form-and-project-settings/restrict-to-domain/).
+Domain restrictions require the browser to send the referring origin. The page therefore uses `strict-origin-when-cross-origin`. See the [domain restriction settings](https://help.formspree.io/articles/form-and-project-settings/restrict-to-domain/).
 
-## Política de seguridad del contenido
+## Content Security Policy
 
-La etiqueta CSP del encabezado permite scripts, estilos, imágenes y fuentes del mismo origen; bloquea conexiones iniciadas por scripts, objetos e iframes, y restringe los formularios al mismo origen y a Formspree. No permite código o estilos inline arbitrarios ni una etiqueta `base`.
+The CSP tag in the document head allows scripts, styles, images, and fonts from the same origin; blocks script-initiated connections, objects, and iframes; and restricts form submissions to the same origin and Formspree. It does not allow arbitrary inline code or styles, or a `base` element.
 
-Mantén la política antes de los recursos del documento. Si incorporas un proveedor externo, permite únicamente los orígenes y tipos de recursos que realmente requiere; evita comodines y permisos como `unsafe-inline` o `unsafe-eval`.
+Keep the policy before the document's resources. If you add an external provider, allow only the origins and resource types it actually requires; avoid wildcards and permissions such as `unsafe-inline` or `unsafe-eval`.
 
-Las políticas que necesitan cabeceras HTTP, como `frame-ancestors`, no se aplican mediante una etiqueta meta. No agregues directivas que el navegador vaya a ignorar. Consulta la [documentación de CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP).
+Policies that require HTTP headers, such as `frame-ancestors`, do not apply through a meta tag. Do not add directives that the browser will ignore. See the [CSP documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP).
 
-## Publicación y revisión
+## Publishing and review
 
-GitHub Pages publica desde la rama y carpeta configuradas en **Settings → Pages**. Para publicar desde la raíz, la configuración es `master` y `/ (root)`; verifica esa selección antes de modificarla.
+GitHub Pages publishes from the branch and folder configured in **Settings → Pages**. To publish from the repository root, the settings are `master` and `/ (root)`; verify that selection before changing it.
 
-Tras publicar, revisa el sitio, los enlaces, las traducciones, las preferencias y el menú móvil. Comprueba que la consola no muestre recursos bloqueados por CSP. Para verificar la entrega del formulario, realiza una prueba autorizada y confirma la recepción en Formspree y en el buzón.
+After publishing, review the site, links, translations, preferences, and mobile menu. Check that the console does not show resources blocked by CSP. To verify form delivery, run an authorized test and confirm receipt in Formspree and the recipient's inbox.
 
-El historial anterior fue respaldado antes de su reinicio. Los cambios nuevos pueden registrarse normalmente con la cuenta de EI-Flores, sin volver a reescribir el historial.
+### Branch workflow
+
+Merge completed changes after reviewing their pull requests. Automatic deletion of merged temporary branches is enabled for this repository; verify that the branch has been removed after merging. For discarded work, close the pull request and delete its temporary branch only after confirming that no work needs to be retained.
+
+The previous history was backed up before it was restarted. Record new changes normally with the EI-Flores account, without rewriting history again.
